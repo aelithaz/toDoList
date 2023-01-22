@@ -102,8 +102,16 @@ li {
     width: 19em;
 }
 
+li:nth-child(even){
+    background-color: white;
+}
+
 li:nth-child(odd){
     background-color: rgb(75, 255, 195);
+}
+
+.hover{
+    filter: drop-shadow(2px 2px 2.5px black) brightness(0.8);
 }
 
 .strikethrough{

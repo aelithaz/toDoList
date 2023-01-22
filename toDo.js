@@ -11,6 +11,18 @@ function addButton(){
     list.appendChild(li);
 }
 
+document.onmouseover = function(e){
+    if(e.target.tagName == 'LI'){
+        e.target.classList.add('hover');
+    }
+}
+
+document.onmouseout = function(e){
+    if(e.target.tagName == 'LI'){
+        e.target.classList.remove('hover');
+    }
+}
+
 function clearButton(){
     let list = document.getElementById("toDoList");
     list.innerHTML = "";
@@ -26,7 +38,7 @@ document.onauxclick = function(e){
     }
 }
 
-document.ondblclick = function(e){
+document.onclick = function(e){
     if(e.target.tagName == 'LI'){
         if(e.target.classList.contains('strikethrough')){
             e.target.classList.remove('strikethrough');
